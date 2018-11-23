@@ -2,7 +2,7 @@ from django.db import models
 
 
 class Profile(models.Model):
-    vk_id = models.IntegerField(null=False)
+    vk_id = models.IntegerField(null=False, unique=True)
     first_name = models.CharField(null=False, max_length=100)
     last_name = models.CharField(null=False, max_length=100)
     is_closed = models.BooleanField(null=False)
